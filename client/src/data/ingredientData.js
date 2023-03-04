@@ -161,6 +161,80 @@ export default {
             "wikipedia": "https://en.wikipedia.org/wiki/Malic_acid"
             },
     },
+    
+    "glycerol": {
+        "name": "Glycerol",
+        "category": "pump",
+        "euroPerKg": 30,
+        "description": "",
+        "benefits": [""],
+        "sideEffects": [""],
+        "dosage": "",
+        "url": {
+            "examine": "https://examine.com/supplements//",
+            "webmd": "",
+            "wikipedia": "https://en.wikipedia.org/wiki/"
+            },
+    },
 
+    "alphagpc": {
+        "name": "Alpha-GPC",
+        "category": "",
+        "euroPerKg": 300,
+        "description": "",
+        "benefits": [""],
+        "sideEffects": [""],
+        "dosage": "",
+        "url": {
+            "examine": "https://examine.com/supplements/alpha-gpc/",
+            "webmd": "https://www.webmd.com/vitamins/ai/ingredientmono-1087/alpha-gpc",
+            "wikipedia": "https://en.wikipedia.org/wiki/Alpha-GPC"
+            },
+    },
+
+    "agmatine": {
+        "name": "Agmatine Sulfate",
+        "category": "",
+        "euroPerKg": 133,
+        "description": "",
+        "benefits": [""],
+        "sideEffects": [""],
+        "dosage": "",
+        "url": {
+            "examine": "https://examine.com/supplements/agmatine/",
+            "webmd": "https://www.webmd.com/vitamins/ai/ingredientmono-1562/agmatine",
+            "wikipedia": "https://en.wikipedia.org/wiki/Agmatine"
+            },
+    },
+
+    "theanine": {
+        "name": "(L-)Theanine",
+        "category": "",
+        "euroPerKg": 722,
+        "description": "",
+        "benefits": [""],
+        "sideEffects": [""],
+        "dosage": "",
+        "url": {
+            "examine": "https://examine.com/supplements/theanine/",
+            "webmd": "https://www.webmd.com/vitamins/ai/ingredientmono-1053/theanine",
+            "wikipedia": "https://en.wikipedia.org/wiki/Theanine"
+            },
+    },
+
+    "theacrine": {
+        "name": "Theacrine",
+        "category": "",
+        "euroPerKg": 2500,
+        "description": "",
+        "benefits": [""],
+        "sideEffects": [""],
+        "dosage": "",
+        "url": {
+            "examine": "https://examine.com/supplements/theacrine/",
+            "webmd": "https://www.webmd.com/vitamins/ai/ingredientmono-1280/theacrine",
+            "wikipedia": "https://en.wikipedia.org/wiki/Theacrine"
+            },
+    },
 
 }

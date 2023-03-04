@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import {Flex, Select, Stat, StatLabel, StatNumber, StatGroup, Center, Box } from '@chakra-ui/react'
-import productData from '../data/productData'
+import productData from '../../data/productData'
 
 import ComparisonIngredients from './ComparisonIngredients'
-import ingredientData from '../data/ingredientData'
-import ProductSimple from './ProductCard'
+import ingredientData from '../../data/ingredientData'
+import ProductSimple from '../ProductCard'
 
 export default function ComparisonPart({currency, conversionRates}) {
 

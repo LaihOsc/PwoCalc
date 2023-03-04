@@ -6,12 +6,14 @@ import {
   Stack,
   Avatar,
   useColorModeValue,
-  Image
+  Image,
+  Button
 } from '@chakra-ui/react';
 
-import {
-    MdOutlineLeaderboard
-} from 'react-icons/md'
+import 
+    {
+      MdOutlineLeaderboard
+    } from 'react-icons/md'
 
 import {
     GiDuel
@@ -26,19 +28,19 @@ const choose = (prop) => {
     return({
         title: 'Leaderboards',
         description: 'All pre-workouts ranked in order by rating.',
-        icon: <MdOutlineLeaderboard size={'fill'} />
+        icon: <MdOutlineLeaderboard color='black' size={'fill'} />
     })
     } else if(prop === 'duel') {
         return({
             title: 'Duel',
             description: 'Compare pre-workout prices and ingredients 1-on-1.',
-            icon: <GiDuel size={'fill'}/>
+            icon: <GiDuel color='black' size={'fill'}/>
         })
     } else if(prop === 'calculator') {
         return({
             title: 'Calculator',
             description: 'Calculate the cost of creating your own pre-workout.',
-            icon: <TbMathSymbols size={'fill'}/>
+            icon: <TbMathSymbols color='black' size={'fill'}/>
         })
     }
 }
@@ -49,7 +51,7 @@ export default function LandingPageCard({prop, handleTabChange}) {
 
     const data = choose(prop)
   return (
-    <Center onClick={handleTabChange} px={4} py={6}>
+    <Center id={prop} px={4} py={6}>
       <Box
         maxW={'445px'}
         w={'full'}
@@ -78,6 +80,20 @@ export default function LandingPageCard({prop, handleTabChange}) {
           <Text color={'gray.500'}>
             {data.description}
           </Text>
+
+          <Button onClick={handleTabChange}
+              colorScheme={'green'}
+              bg={'green.400'}
+              rounded={'3xl'}
+              p={10}
+              fontSize={'xl'}
+              _hover={{
+                bg: 'green.500',
+
+              }}
+              value={prop}>
+              <Text>yee</Text>
+            </Button>
 
         
         </Stack>

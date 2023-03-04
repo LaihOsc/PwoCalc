@@ -2,11 +2,11 @@ export default {
     "buckedUp": {
         "name": "Bucked Up®",
         "ASIN": "B07474K6MH",
-        "url": "https://www.amazon.com/NUTRITION-Standard-Pre-Workout-Beta-Alanine-Blueberry/dp/B00PYB335O",
-        "img": "https://m.media-amazon.com/images/I/61h1jcsOlfL._AC_UL400_.jpg",
+        "url": "https://www.buckedup.com/pre-workout-supplement",
+        "img": "https://www.buckedup.com/public/upload/img/products/options/values/7689-BU-PRE-20oz-Candy-CherryCandy-2022.11.14_01-F-600px-web%20(1).1675364235.png",
         "price": {
             "currency": "USD",
-            "amount": 40
+            "amount": 50
         },
         "servings": 30,
         "ingredients": [
@@ -14,7 +14,8 @@ export default {
                 ['citrullineMalate', 6000],
                 ['betaAlanine', 2000],
                 ['caffeine', 200],
-                ['taurine', 100]
+                ['taurine', 100],
+                ['alphagpc', 200]
             
         ],
         
@@ -24,8 +25,8 @@ export default {
     "gorillaMode": {
         "name": "Gorilla mode",
         "ASIN": "B09D667JS7",
-        "url": "https://www.amazon.com/Gorilla-Mode-Pre-Workout-Dimethylamine/dp/B09D667JS7",
-        "img": "https://m.media-amazon.com/images/I/715LpY0LvVL._AC_SL1500_.jpg",
+        "url": "https://gorillamind.com/products/gorilla-mode?variant=40826889666605",
+        "img": "https://cdn.shopify.com/s/files/1/0369/2580/0493/products/Gorilla-Mode-Krush-OG.png?v=1677478170&width=1200",
         "price": {
             "currency": "USD",
             "amount": 50
@@ -34,10 +35,12 @@ export default {
             
                 ['citrulline', 4500],
                 ['creatine', 2500],
+                ['glycerol', 1500],
+                ['malicAcid', 1500],
                 ['trimethylglycine', 1250],
                 ['tyrosine', 750],
+                ['agmatine', 500],
                 ['caffeine', 175],
-                ['malicAcid', 1500]
             
         ],
         "servings": 40
@@ -48,8 +51,8 @@ export default {
     "c4Original": {
         "name": "C4 Original",
         "ASIN": "B00U4621CA",
-        "url": "https://www.amazon.com/Cellucor-Original-Supplement-Creatine-Citrulline/dp/B00U4621CA",
-        "img": "https://m.media-amazon.com/images/I/71VYHPXVvXL._AC_SL1500_.jpg",
+        "url": "https://cellucor.com/products/c4-original?variant=39915775033406",
+        "img": "http://cdn.shopify.com/s/files/1/1492/2278/products/CELL_2095_Digital_ProductRefresh_PDPimagery_C4Original_2022_Render.png?v=1664803436",
         "price": {
             "currency": "USD",
             "amount": 30
@@ -57,9 +60,9 @@ export default {
         "servings": 30,
         "ingredients": [
             
-                ['citrulline', 1000],
+                ['creatine', 1000],
                 ['citrullineMalate', 1000],
-                ['betaAlanine', 2000],
+                ['betaAlanine', 1600],
                 ['caffeine', 150],
             
         ]
@@ -82,8 +85,9 @@ export default {
                 ['citrullineMalate', 4000],
                 ['creatine', 3250],
                 ['betaAlanine', 2000],
-                ['caffeine', 300],
+                ['caffeine', 200],
                 ['taurine', 200],
+                ['theacrine', 100],
 
             
         ]
@@ -107,7 +111,9 @@ export default {
                 ['malicAcid', 1700],
                 ['trimethylglycine', 1500],
                 ['caffeine', 200],
-                ['taurine', 100]
+                ['glycerol', 1500],
+                ['agmatine', 750],
+                ['alphagpc', 200],
             
         ]
         
@@ -116,11 +122,11 @@ export default {
     "sixStarExplosion": {
         "name": "Six Star Explosion",
         "ASIN": 'B09VH6L2BR',
-        "url": "https://www.amazon.com/Six-Star-PreWorkout-Explosion-Pre-Workout/dp/B09VH6L2BR",
-        "img": "https://m.media-amazon.com/images/I/71jllG9Rg8L._AC_SL1500_.jpg",
+        "url": "https://www.sixstarpro.com/products/pre-workout-explosion",
+        "img": "https://ucarecdn.com/f64387a0-a16a-4d0c-b9be-0b40c637679f/-/format/auto/-/preview/1024x1024/-/quality/lighter/pre-workout-explosion-splash.png",
         "price": {
             "currency": "USD",
-            "amount": 30,
+            "amount": 16,
         },
         "servings": 30,
         "ingredients": [
@@ -136,13 +142,13 @@ export default {
     },
     
     "mrHydeSignature": {
-        "name": "Mr. Hyde Signature Series",
+        "name": "Mr. Hyde Signature",
         "ASIN": 'B07HNM1MGK',
-        "url": "https://www.amazon.com/ProSupps-Signature-Pre-Workout-Energy-Drink/dp/B07HNM1MGK",
-        "img": "https://m.media-amazon.com/images/I/71L-vzvSQ9L._AC_SL1500_.jpg",
+        "url": "https://www.prosupps.com/products/mr-hyde-signature?variant=40518717964473",
+        "img": "https://cdn.shopify.com/s/files/1/0568/5064/5177/products/mr-hyde-signature-2022-blue-razz.png?v=1664473490",
         "price": {
             "currency": "USD",
-            "amount": 30
+            "amount": 20
         },
         "servings": 30,
         "ingredients": [
@@ -151,8 +157,79 @@ export default {
                 ['creatine', 1000],
                 ['arginine', 500],
                 ['citrulline', 250],
-                // ['theanine', 26],
-                ['caffeine', 169],
+                ['theanine', 26],
+                ['tyrosine', 26],
+                ['caffeine', 200],
+                ['theacrine', 16],
+    
+        ]
+
+    },
+
+    "alphaLionSuperhumanPump": {
+        "name": "Alpha Lion Superhuman Pump",
+        "ASIN": 'B0949JPWH2',
+        "url": "https://www.alphalion.com/products/superhuman-pump",
+        "img": "https://cdn.shopify.com/s/files/1/2321/6571/products/SH-PUMP-BLUE-STEEL_1_1_7c7e0d5e-cf04-415c-a850-e3fd9a73c7e4.png?v=1677595378",
+        "price": {
+            "currency": "USD",
+            "amount": 50
+        },
+        "servings": 42,
+        "ingredients": [
+    
+                ['citrullineMalate', 4000],
+                ['betaAlanine', 1750],
+                ['glycerol', 1500],
+                ['alphagpc', 150],
+    
+        ]
+
+    },
+
+    "alphaLionSuperhumanPre": {
+        "name": "Alpha Lion Superhuman Pre",
+        "ASIN": '',
+        "url": "https://www.alphalion.com/products/superhuman-pre-workout",
+        "img": "https://cdn.shopify.com/s/files/1/2321/6571/products/SuperhumanPRELionsblood1bottle.png?v=1669676789",
+        "price": {
+            "currency": "USD",
+            "amount": 50
+        },
+        "servings": 21,
+        "ingredients": [
+    
+                ['citrullineMalate', 4000],
+                ['betaAlanine', 3200],
+                ['trimethylglycine', 2500],
+                ['tyrosine', 1500],
+                ['caffeine', 325],
+                ['taurine', 1000],
+    
+        ]
+
+    },
+    "cbumThavage": {
+        "name": "Raw CBUM Thavage",
+        "ASIN": '',
+        "url": "https://getrawnutrition.com/products/cbum-series-thavage-pre-workout",
+        "img": "https://cdn.shopify.com/s/files/1/0303/1135/0365/products/1_708b7fea-b118-45cd-86ba-7833ba9a9277_720x.png?v=1669306556",
+        "price": {
+            "currency": "USD",
+            "amount": 50
+        },
+        "servings": 40,
+        "ingredients": [
+    
+                ['citrulline', 3000],
+                ['betaAlanine', 1600],
+                ['trimethylglycine', 1250],
+                ['tyrosine', 1000],
+                ['taurine', 1000],
+                ['agmatine', 500],
+                ['alphagpc', 200],
+                ['caffeine', 150],
+                ['theanine', 75],
     
         ]
 

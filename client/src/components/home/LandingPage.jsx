@@ -7,8 +7,6 @@ import {
   Button,
   Stack,
   Flex,
-  Icon,
-  useColorModeValue,
   createIcon,
   Link,
 } from '@chakra-ui/react';
@@ -53,7 +51,7 @@ export default function LandingPage({handleTabChange}) {
             align={'center'}
             alignSelf={'center'}
             position={'relative'}>
-              <Link href='https://github.com/LaihOsc/PwoCalc'>
+              <Link href='https://github.com/LaihOsc/PwoCalc' isExternal>
             <Button
               colorScheme={'green'}
               bg={'green.400'}

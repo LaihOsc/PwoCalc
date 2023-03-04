@@ -4,19 +4,15 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
   TableContainer,
-  IconButton,
   useColorMode,
 } from '@chakra-ui/react'
 
-import { DeleteIcon } from '@chakra-ui/icons'
-import IngredientModal from './IngredientModal'
-import ingredientData from '../data/ingredientData'
+import IngredientModal from '../general/IngredientModal'
+import ingredientData from '../../data/ingredientData'
 
 
 export default function ComparisonIngredients({ingredients, currency, conversionRate, approximate}) {

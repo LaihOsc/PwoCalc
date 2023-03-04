@@ -13,7 +13,6 @@ import {
   Text,
   ListItem,
   UnorderedList,
-  List
 } from '@chakra-ui/react'
 
   import { InfoOutlineIcon } from '@chakra-ui/icons'

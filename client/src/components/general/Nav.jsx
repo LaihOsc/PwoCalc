@@ -1,28 +1,21 @@
-import { ReactNode } from 'react';
 import {
   Box,
   Flex,
-  Avatar,
   Link,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
   useColorMode,
-  Center,
   Select,
-  Text
+  Text,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 import {
   GiAcid
 } from 'react-icons/gi'
+
 
 const NavLink = ({ children }) => (
   <Link
@@ -38,6 +31,9 @@ const NavLink = ({ children }) => (
   </Link>
 );
 
+
+
+
 export default function Nav({handleCurrencyChange, conversionRates, currency, tab, handleTabChange}) {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -48,12 +44,17 @@ export default function Nav({handleCurrencyChange, conversionRates, currency, ta
           <Stack direction={'column'} align={'center'}>
           <GiAcid />
           <Text fontWeight={'bold'}>TOPWO</Text>
+         
           </Stack>
+          
+          
 
-          <Flex w={300} flexDir={'row'} justifyContent={'space-between'}>
+
+          <Flex w={500} flexDir={'row'} justifyContent={'space-between'}>
+            <Button value={'landingPage'} onClick={handleTabChange} colorScheme={tab == 'landingPage' ? 'green' : null}>Home</Button>
+            <Button value={'leaderboards'} onClick={handleTabChange} colorScheme={tab == 'leaderboards' ? 'green' : null}>Leaderboards</Button>
+            <Button value={'duel'} onClick={handleTabChange} colorScheme={tab == 'duel' ? 'green' : null}>Duel</Button>
             <Button value={'calculator'} onClick={handleTabChange} colorScheme={tab == 'calculator' ? 'green' : null}>Calculator</Button>
-            <Button value={'ranking'} onClick={handleTabChange} colorScheme={tab == 'ranking' ? 'green' : null}>Ranking</Button>
-            <Button value={'comparison'} onClick={handleTabChange} colorScheme={tab == 'comparison' ? 'green' : null}>Comparison</Button>
             
             </Flex>
 

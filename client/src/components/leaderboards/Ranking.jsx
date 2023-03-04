@@ -1,23 +1,21 @@
-import { Box, Center, Heading } from '@chakra-ui/react'
+import { Box, Center, Tooltip } from '@chakra-ui/react'
 import React from 'react'
-import ingredientData from '../data/ingredientData'
+import ingredientData from '../../data/ingredientData'
 
 import {
     Table,
     Thead,
     Tbody,
-    Tfoot,
     Tr,
     Th,
     Td,
-    TableCaption,
     TableContainer,
     Image,
     CircularProgress,
-    CircularProgressLabel
+    CircularProgressLabel,
+    Flex
   } from '@chakra-ui/react'
 import InfoModal from './InfoModal'
-import { InfoOutlineIcon } from '@chakra-ui/icons'
 
 export default function Ranking({products, conversionRates, currency}) {
 
@@ -37,14 +35,6 @@ export default function Ranking({products, conversionRates, currency}) {
         return((Math.round((amountInKg * pricePerKg) * 1000))/1000)
       }
 
-      const servingIngredientCost = products['buckedUp'].ingredients.map((ingredient) => {
-        return(calculateCost(ingredient[0], ingredient[1]))
-      })
-
-      const totalIngredientCost = calculateTotalCost(servingIngredientCost) * products['buckedUp'].servings
-      console.log(totalIngredientCost)
-
-      const priceInEur = products['buckedUp'].price.amount / conversionRates[products['buckedUp'].price.currency]
 
       const approximate = (price => Math.round(price * 100) / 100)
 
@@ -58,6 +48,8 @@ export default function Ranking({products, conversionRates, currency}) {
         
         const priceInEur = productObject.price.amount / conversionRates[productObject.price.currency]
 
+
+        productObject['ingredientCost'] = totalIngredientCost
         productObject['rating'] = (totalIngredientCost / priceInEur)
         return(productObject)
     })
@@ -78,13 +70,13 @@ export default function Ranking({products, conversionRates, currency}) {
   return (
     <Center>
         <Box minW={1400} w={1400} p={5} borderWidth="1px">
-          <Heading textAlign={'center'}>Ingredient cost / Product price</Heading>
         <TableContainer>
   <Table variant='simple'>
     <Thead>
       <Tr>
         <Th>Ranking</Th>
         <Th>Product</Th>
+        <Th>Ingredient breakdown</Th>
         <Th w={'min-content'} isNumeric><InfoModal /></Th>
       </Tr>
     </Thead>
@@ -92,10 +84,46 @@ export default function Ranking({products, conversionRates, currency}) {
       
       {sortedProducts.map((product, index) => {
         const rating = product.rating * 100
+        const totalIngredientCost = product.ingredientCost
+        const ingredients = product.ingredients
+
+        const ingredientObjects = ingredients.map((ingredient) => {
+          let ingredientObject = {
+            id: ingredient[0],
+            name: ingredientData[ingredient[0]].name,
+            amount: ingredient[1],
+            cost: (calculateCost(ingredient[0], ingredient[1])) * conversionRates[currency]
+          }
+          console.log(ingredientObject)
+          return(ingredientObject)
+
+        })
+
+        let sortedProductIngredients = [...ingredientObjects]
+    sortedProductIngredients.sort((a, b) => {
+        if (a.cost < b.cost) {
+            return 1
+        }
+        if (a.cost > b.cost) {
+            return -1
+        }
+        return 0
+    })
         return(
             <Tr>
                 <Td>{index + 1 }</Td>
                 <Td><Image w={20} src={product.img} />{product.name}</Td>
+                <Td>
+                  <Flex w={'full'} backgroundColor={'gold'}>
+                    {sortedProductIngredients.map((ingredient, index) => {
+                      return(
+                        <Tooltip label={`${ingredient.name} ${ingredient.cost} ${currency}`}>
+                        <Box h={10} backgroundColor={`blue.${index + 1}00`} w={calculateCost(ingredient.id, ingredient.amount) / (totalIngredientCost / product.servings)}><span>&shy;</span>{`${ingredient.id[0]}${ingredient.id[1]}${ingredient.id[2]}`}</Box>
+                        </Tooltip>
+                      )
+                    })}
+                  </Flex>
+                </Td>
                 <Td isNumeric>
                 <CircularProgress 
             size={100} 

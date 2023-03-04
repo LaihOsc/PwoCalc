@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import {Flex, Select, Stat, StatLabel, StatNumber, StatGroup, Center } from '@chakra-ui/react'
-import productData from '../data/productData'
+import productData from '../../data/productData'
 
 import ComparisonIngredients from './ComparisonIngredients'
-import ingredientData from '../data/ingredientData'
-import ProductSimple from './ProductCard'
+import ingredientData from '../../data/ingredientData'
+import ProductSimple from '../ProductCard'
 
 export default function ComparisonPreworkout({currency, approximate, conversionRates}) {
 
@@ -41,9 +41,6 @@ export default function ComparisonPreworkout({currency, approximate, conversionR
   const servingMaterialCosts = calculateTotalCost(
     product.ingredients.map(ingredient => calculateCost(ingredient[0], ingredient[1]) * conversionRate) )
       
-  console.log(servingMaterialCosts)
-  console.log("/")
-  console.log(servingPrice * conversionRate)
 
   return (
         <>

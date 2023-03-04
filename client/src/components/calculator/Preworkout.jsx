@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Box, Button, Flex, Input, Select, Stat, StatLabel, StatNumber, StatHelpText, StatGroup, Text, Heading } from '@chakra-ui/react'
-import ingredientData from '../data/ingredientData'
-import Ingredients from './Ingredients'
-import ServingSlider from './ServingSlider'
+import { Box, Button, Flex, Input, Select, Stat, StatLabel, StatNumber, StatGroup, Text, Heading } from '@chakra-ui/react'
+import ingredientData from '../../data/ingredientData'
+import Ingredients from '../general/Ingredients'
+import ServingSlider from '../general/ServingSlider'
 
-import ComparisonPreworkout from './ComparisonPreworkout'
 
 export default function Preworkout({conversionRates, currency}) {
 
@@ -14,22 +13,14 @@ export default function Preworkout({conversionRates, currency}) {
   const [servingCost, setServingCost]= useState(0)
   const [servings, setServings] = useState(0)
 
+  useEffect(() => {
+    setServingCost(calculateTotalCost(ingredients.map((ingredient) => ingredient.cost)))
+  }, [ingredients])
 
+  const ingredientSelect = useRef()
+  const amountInput = useRef()
 
-  const calculateCost = (id, amount) => {
-    const pricePerKg = ingredientData[id].euroPerKg
-    const amountInKg = amount / 1000000
-    return((Math.round((amountInKg * pricePerKg) * 1000))/1000)
-
-  }
-
-  const calculateTotalCost = (costsArray) => {
-    const initialValue = 0
-    const sumWithInitial = costsArray.reduce(
-      (accumulator, currentValue) => accumulator + currentValue, initialValue
-    );
-    return(sumWithInitial)
-  }
+  //Event handlers
 
   const handleClick = () => {
     setIngredients([...ingredients, {
@@ -44,16 +35,8 @@ export default function Preworkout({conversionRates, currency}) {
     amountInput.current.value = ""
   }
 
-
-  
-
-  
-  
-
   const handleServingsChange = (e) => setServings(e)
 
-
-  
 
   const handleKeyDown = (e) => {
     if(e.key === "Enter") {
@@ -70,23 +53,6 @@ export default function Preworkout({conversionRates, currency}) {
     }
   }
 
-  const removeIngredient = (index) => {
-    const newIngredients = ingredients.filter((_, i) => i !== index)
-    setIngredients(newIngredients)
-  }
-
-  const ingredientKeys = Object.keys(ingredientData)
-
-
-  useEffect(() => {
-    setServingCost(calculateTotalCost(ingredients.map((ingredient) => ingredient.cost)))
-  }, [ingredients])
-
-  const ingredientSelect = useRef()
-  const amountInput = useRef()
-
-  const approximate = (price => Math.round(price * 100) / 100)  
-
   const handleSelectChange = (e) => {
     setInputText(e.target.value)
     amountInput.current.focus()
@@ -96,6 +62,28 @@ export default function Preworkout({conversionRates, currency}) {
     setAmount(e.target.value)
   }
 
+  const removeIngredient = (index) => {
+    const newIngredients = ingredients.filter((_, i) => i !== index)
+    setIngredients(newIngredients)
+  }
+
+  const ingredientKeys = Object.keys(ingredientData)
+
+  const approximate = (price => Math.round(price * 100) / 100)  
+
+  const calculateCost = (id, amount) => {
+    const pricePerKg = ingredientData[id].euroPerKg
+    const amountInKg = amount / 1000000
+    return((Math.round((amountInKg * pricePerKg) * 1000))/1000)
+  }
+
+  const calculateTotalCost = (costsArray) => {
+    const initialValue = 0
+    const sumWithInitial = costsArray.reduce(
+      (accumulator, currentValue) => accumulator + currentValue, initialValue
+    );
+    return(sumWithInitial)
+  }
   return (
         <>
         <Box minW={700} w={700} p={5} borderWidth="1px">
@@ -147,9 +135,6 @@ export default function Preworkout({conversionRates, currency}) {
 
         </Flex>
 
-        <Heading marginY={20} textAlign={'center'}>Comparison:</Heading>
-
-        <ComparisonPreworkout currency={currency} approximate={approximate} conversionRates={conversionRates} />
         </Box>
 
         
