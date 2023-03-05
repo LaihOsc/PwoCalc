@@ -4,7 +4,7 @@ import productData from '../../data/productData'
 
 import ComparisonIngredients from './ComparisonIngredients'
 import ingredientData from '../../data/ingredientData'
-import ProductSimple from '../ProductCard'
+import ProductSimple from './ProductCard'
 
 export default function ComparisonPreworkout({currency, approximate, conversionRates}) {
 

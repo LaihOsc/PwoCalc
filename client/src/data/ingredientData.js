@@ -1,6 +1,7 @@
 export default {
     "creatine": {
         "id": "creatine",
+        "dose": 2500,
         "name": "Creatine Monohydrate",
         "category": "",
         "euroPerKg": 63,
@@ -18,6 +19,7 @@ export default {
 
     "citrulline": {
         "id": "citrulline",
+        "dose": 4500,
         "name": "(L-)Citrulline",
         "category": "NEAA",
         "euroPerKg": 120,
@@ -34,6 +36,7 @@ export default {
 
     "citrullineMalate": {
         "id": "citrullineMalate",
+        "dose": 6750,
         "name": "Citrulline Malate",
         "category": "NEAA",
         "euroPerKg": 80,
@@ -51,6 +54,7 @@ export default {
     
     "caffeine": {
         "id": "caffeine",
+        "dose": 150,
         "name": "Caffeine",
         "category": "Stimulant",
         "euroPerKg": 450,
@@ -67,6 +71,7 @@ export default {
 
     "betaAlanine": {
         "id": "betaAlanine",
+        "dose": 1600,
         "name": "Beta-alanine",
         "category": "NEAA",
         "euroPerKg": 90,
@@ -83,6 +88,7 @@ export default {
 
     "trimethylglycine": {
         "id": "trimethylglycine",
+        "dose": 1250,
         "name": "Trimethylglycine (Betaine)",
         "category": "",
         "euroPerKg": 44,
@@ -99,6 +105,7 @@ export default {
 
     "arginine": {
         "id": "arginine",
+        "dose": 1,
         "name": "(L-)Arginine",
         "category": "NEAA",
         "euroPerKg": 40,
@@ -115,6 +122,7 @@ export default {
 
     "tyrosine": {
         "id": "tyrosine",
+        "dose": 750,
         "name": "(L-)Tyrosine",
         "category": "NEAA",
         "euroPerKg": 60,
@@ -131,6 +139,7 @@ export default {
 
     "taurine": {
         "id": "taurine",
+        "dose": 1000,
         "name": "Taurine",
         "category": "NEAA",
         "euroPerKg": 38,
@@ -148,6 +157,7 @@ export default {
 
     "malicAcid": {
         "id": "malicAcid",
+        "dose": 1,
         "name": "Malic Acid",
         "category": "Price inflator",
         "euroPerKg": 15,
@@ -163,6 +173,8 @@ export default {
     },
     
     "glycerol": {
+        "id": "glycerol",
+        "dose": 1,
         "name": "Glycerol",
         "category": "pump",
         "euroPerKg": 30,
@@ -178,6 +190,8 @@ export default {
     },
 
     "alphagpc": {
+        "id": "alphagpc",
+        "dose": 1,
         "name": "Alpha-GPC",
         "category": "",
         "euroPerKg": 300,
@@ -193,6 +207,8 @@ export default {
     },
 
     "agmatine": {
+        "id": "agmatine",
+        "dose": 500,
         "name": "Agmatine Sulfate",
         "category": "",
         "euroPerKg": 133,
@@ -208,6 +224,8 @@ export default {
     },
 
     "theanine": {
+        "id": "theanine",
+        "dose": 1,
         "name": "(L-)Theanine",
         "category": "",
         "euroPerKg": 722,
@@ -223,9 +241,11 @@ export default {
     },
 
     "theacrine": {
+        "id": "theacrine",
+        "dose": 1,
         "name": "Theacrine",
         "category": "",
-        "euroPerKg": 2500,
+        "euroPerKg": 1000,
         "description": "",
         "benefits": [""],
         "sideEffects": [""],

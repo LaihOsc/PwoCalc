@@ -4,7 +4,8 @@ import productData from '../../data/productData'
 
 import ComparisonIngredients from './ComparisonIngredients'
 import ingredientData from '../../data/ingredientData'
-import ProductSimple from '../ProductCard'
+import ProductSimple from './ProductCard'
+import ratingCalculator from '../general/ratingCalculator'
 
 export default function ComparisonPart({currency, conversionRates}) {
 
@@ -64,7 +65,7 @@ export default function ComparisonPart({currency, conversionRates}) {
         product={product} 
         perServing={approximate(servingPrice * conversionRate)} 
         total={approximate(totalPrice * conversionRate)} 
-        rating={approximate(servingMaterialCosts / (servingPrice * conversionRate))*100}
+        rating={approximate(((servingMaterialCosts / (servingPrice * conversionRate) + ratingCalculator(ingredientData, product.ingredients) ) / 2))*100}
         currency={currency}
         />
     

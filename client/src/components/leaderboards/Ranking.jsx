@@ -16,6 +16,7 @@ import {
     Flex
   } from '@chakra-ui/react'
 import InfoModal from './InfoModal'
+import ratingCalculator from '../general/ratingCalculator'
 
 export default function Ranking({products, conversionRates, currency}) {
 
@@ -35,6 +36,8 @@ export default function Ranking({products, conversionRates, currency}) {
         return((Math.round((amountInKg * pricePerKg) * 1000))/1000)
       }
 
+      
+
 
       const approximate = (price => Math.round(price * 100) / 100)
 
@@ -51,16 +54,17 @@ export default function Ranking({products, conversionRates, currency}) {
 
         productObject['ingredientCost'] = totalIngredientCost
         productObject['rating'] = (totalIngredientCost / priceInEur)
+        productObject['ingredientRating'] = ratingCalculator(ingredientData, productObject.ingredients)
+        productObject['finalRating'] = ((productObject['rating'] + productObject['ingredientRating']) / 2) * 100
         return(productObject)
     })
-    console.log(productArray)
 
     let sortedProducts = [...productArray]
     sortedProducts.sort((a, b) => {
-        if (a.rating < b.rating) {
+        if (a.finalRating < b.finalRating) {
             return 1
         }
-        if (a.rating > b.rating) {
+        if (a.finalRating > b.finalRating) {
             return -1
         }
         return 0
@@ -77,15 +81,19 @@ export default function Ranking({products, conversionRates, currency}) {
         <Th>Ranking</Th>
         <Th>Product</Th>
         <Th>Ingredient breakdown</Th>
-        <Th w={'min-content'} isNumeric><InfoModal /></Th>
+        <Th w={'min-content'} isNumeric><InfoModal title='Total' content={`Formula combining price of product and dosing of ingredients`} /></Th>
       </Tr>
     </Thead>
     <Tbody>
       
       {sortedProducts.map((product, index) => {
-        const rating = product.rating * 100
+        const ingredientRating = product.ingredientRating * 100
+        const costRating = product.rating * 100
+        const finalRating = product.finalRating
         const totalIngredientCost = product.ingredientCost
         const ingredients = product.ingredients
+
+
 
         const ingredientObjects = ingredients.map((ingredient) => {
           let ingredientObject = {
@@ -118,7 +126,7 @@ export default function Ranking({products, conversionRates, currency}) {
                     {sortedProductIngredients.map((ingredient, index) => {
                       return(
                         <Tooltip label={`${ingredient.name} ${ingredient.cost} ${currency}`}>
-                        <Box h={10} backgroundColor={`blue.${index + 1}00`} w={calculateCost(ingredient.id, ingredient.amount) / (totalIngredientCost / product.servings)}><span>&shy;</span>{`${ingredient.id[0]}${ingredient.id[1]}${ingredient.id[2]}`}</Box>
+                        <Box h={10} backgroundColor={`blue.${index + 1}00`} w={calculateCost(ingredient.id, ingredient.amount) / (totalIngredientCost / product.servings)}><span>&shy;</span></Box>
                         </Tooltip>
                       )
                     })}
@@ -127,17 +135,17 @@ export default function Ranking({products, conversionRates, currency}) {
                 <Td isNumeric>
                 <CircularProgress 
             size={100} 
-            value={rating}
+            value={finalRating}
             color={
-                rating >= 75
+                finalRating >= 75
                 ? 'green.400':
-                 75 >= rating && rating >= 50
+                 75 >= finalRating && finalRating >= 50
                 ? 'orange.400':
-                 50 >= rating && rating >= 40
+                 50 >= finalRating && finalRating >= 40
                 ? 'red.400': 'red.800'
             }
             >
-                <CircularProgressLabel>{approximate(product.rating) * 100}%</CircularProgressLabel>
+                <CircularProgressLabel>{approximate(finalRating / 100) * 100 }%</CircularProgressLabel>
             </CircularProgress>
                     </Td>
             </Tr>
