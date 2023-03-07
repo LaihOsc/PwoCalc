@@ -86,7 +86,7 @@ export default function Preworkout({conversionRates, currency}) {
   }
   return (
         <>
-        <Box minW={700} w={700} p={5} borderWidth="1px">
+        <Box minW={700} w={700} p={5} borderWidth="1px" id='calculator'>
         <Flex p={4} justifyContent={'space-between'}>
         <Heading textAlign={'center'}>Pre-Workout Calculator</Heading>
         

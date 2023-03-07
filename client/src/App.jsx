@@ -8,6 +8,7 @@ import productData from "./data/productData"
 import Comparison from "./components/duel/Comparison"
 import LandingPage from "./components/home/LandingPage"
 import Footer from "./components/general/Footer"
+import { Route, Routes } from "react-router-dom"
 
 
 function App() {
@@ -36,15 +37,13 @@ function App() {
       <Flex justifyItems={"center"} flexDir={'column'}>
       <Nav handleTabChange={handleTabChange} handleCurrencyChange={handleCurrencyChange} conversionRates={conversionRates} currency={currency} tab={tab}/>
       <Center pb={20}>
-      {tab == 'leaderboards' 
-      ? <Ranking products={productData} conversionRates={conversionRates} currency={currency}/>
-      : tab == 'calculator' 
-      ? <Preworkout conversionRates={conversionRates} currency={currency}/>
-      : tab == 'landingPage'
-      ? <LandingPage handleTabChange={handleTabChange} />
-      : tab == 'duel' ? <Comparison conversionRates={conversionRates} currency={currency}/> :
-      null
-    }
+      
+      <Routes>
+        <Route path="/" element={<LandingPage handleTabChange={handleTabChange} />}></Route>
+        <Route path="/ranking" element={<Ranking products={productData} conversionRates={conversionRates} currency={currency} />}></Route>
+        <Route path="/duel" element={<Comparison conversionRates={conversionRates} currency={currency} />}></Route>
+        <Route path="/calculator" element={<Preworkout conversionRates={conversionRates} currency={currency} />}></Route>
+      </Routes>
       
       </Center>
       <Footer />

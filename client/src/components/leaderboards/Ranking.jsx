@@ -72,7 +72,7 @@ export default function Ranking({products, conversionRates, currency}) {
 
     console.log(sortedProducts)
   return (
-    <Center>
+    <Center id='ranking'>
         <Box minW={1400} w={1400} p={5} borderWidth="1px">
         <TableContainer>
   <Table variant='simple'>

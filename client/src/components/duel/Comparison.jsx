@@ -4,7 +4,7 @@ import ComparisonPart from './ComparisonPart'
 
 export default function Comparison({currency, conversionRates}) {
   return (
-    <Flex flexDir={'row'}>
+    <Flex flexDir={'row'} id={'duel'}>
         <ComparisonPart currency={currency} conversionRates={conversionRates} />
         <ComparisonPart currency={currency} conversionRates={conversionRates} />
     </Flex>

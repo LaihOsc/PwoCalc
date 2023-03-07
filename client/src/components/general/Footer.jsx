@@ -10,9 +10,15 @@ import {
     Input,
     IconButton,
     useColorModeValue,
+    Flex
   } from '@chakra-ui/react';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { BiMailSend } from 'react-icons/bi';
+  import {
+    GiAcid
+  } from 'react-icons/gi'
+
+  import { NavHashLink } from 'react-router-hash-link';
   
   const Logo = (props) => {
     return (
@@ -79,9 +85,11 @@ import {
             templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
             spacing={8}>
             <Stack spacing={6}>
-              <Box>
-                <Logo color={useColorModeValue('gray.700', 'white')} />
-              </Box>
+              <Flex flexDir={'row'}>
+              <GiAcid size={50} />
+                <Text fontSize={'3xl'} fontWeight={'extrabold'}>TOPWO</Text>
+                <GiAcid size={50} />
+              </Flex>
               <Text fontSize={'sm'}>
                 © 2023 Topwo. All rights reserved
               </Text>
@@ -98,12 +106,12 @@ import {
               </Stack>
             </Stack>
             <Stack align={'flex-start'}>
-              <ListHeader>Company</ListHeader>
-              <Link href={'#'}>About us</Link>
-              <Link href={'#'}>Blog</Link>
-              <Link href={'#'}>Contact us</Link>
-              <Link href={'#'}>Pricing</Link>
-              <Link href={'#'}>Testimonials</Link>
+              <ListHeader>Website</ListHeader>
+              <NavHashLink to="/#home" smooth >Home</NavHashLink>
+              <NavHashLink to="/#about" smooth >About</NavHashLink>
+              <NavHashLink to="/ranking/#ranking" smooth >Ranking</NavHashLink>
+              <NavHashLink to="/duel/#duel" smooth >Duel</NavHashLink>
+              <NavHashLink to="/calculator/#calculator" smooth >Calculator</NavHashLink>
             </Stack>
             <Stack align={'flex-start'}>
               <ListHeader>Support</ListHeader>

@@ -15,6 +15,7 @@ import LandingPageCard from './LandingPageCard';
 import {
   AiOutlineGithub
 } from 'react-icons/ai'
+import Contact from '../general/Contact';
 
 export default function LandingPage({handleTabChange}) {
   return (
@@ -26,7 +27,7 @@ export default function LandingPage({handleTabChange}) {
         />
       </Head>
 
-      <Container maxW={'4xl'}>
+      <Container id='home' maxW={'4xl'}>
         <Stack
           as={Box}
           textAlign={'center'}
@@ -68,9 +69,9 @@ export default function LandingPage({handleTabChange}) {
           </Stack>
         </Stack>
         <Flex direction={'row'} justifyContent={'flex-start'}>
-          <LandingPageCard prop={'leaderboards'} handleTabChange={handleTabChange} />
-          <LandingPageCard prop={'duel'} handleTabChange={handleTabChange} />
-          <LandingPageCard prop={'calculator'} handleTabChange={handleTabChange} />
+          <LandingPageCard href={'ranking'} prop={'leaderboards'} handleTabChange={handleTabChange} />
+          <LandingPageCard href={'duel'} prop={'duel'} handleTabChange={handleTabChange} />
+          <LandingPageCard href={'calculator'} prop={'calculator'} handleTabChange={handleTabChange} />
         </Flex>
         <Stack
           as={Box}
@@ -80,35 +81,37 @@ export default function LandingPage({handleTabChange}) {
           <Heading
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-            lineHeight={'110%'}>
-            About <br />
+            lineHeight={'110%'}
+            id={'about'}>
+            About<br />
 
           </Heading>
           <Text color={'gray.500'}>
-          We know that finding the right pre-workout supplement can be a daunting task. With so many products on the market, it can be difficult to know which one will provide you with the best results. That's why we've created Pre-Workout Finder, the ultimate resource for anyone looking to compare pre-workout supplements and create their own personalized blends.
+          We know that finding the right pre-workout supplement can be a daunting task. With so many products on the market, it can be difficult to know which one will provide you with the best results. That's why we've created Topwo, the ultimate resource for anyone looking to compare pre-workout supplements and create their own personalized blends.
           </Text>
           <Text color={'gray.500'}>
           Our website allows you to compare the most popular pre-workout supplements on the market by price and ingredient amounts. We believe that transparency is key when it comes to choosing the right supplement, and that's why we provide detailed information about each product, including the ingredients and the dosages used.
           </Text>
           <Text color={'gray.500'}>
-          In addition to comparing pre-workout supplements, Pre-Workout Finder also allows you to create your own personalized pre-workout blend. Our easy-to-use interface lets you select the ingredients you want in your blend, and then calculates the optimal dosages based on your personal information such as weight and goals. You can even save your customized blend for future use or share it with friends.
+          In addition to comparing pre-workout supplements, Topwo also allows you to create your own personalized pre-workout blend. Our easy-to-use interface lets you select the ingredients you want in your blend, and then calculates the optimal dosages based on your personal information such as weight and goals. You can even save your customized blend for future use or share it with friends.
           </Text>
           <Text color={'gray.500'}>
-          At Pre-Workout Finder, we believe that every athlete deserves access to the best pre-workout supplements on the market. That's why we work hard to provide you with the most comprehensive and up-to-date information available. Whether you're a beginner or an experienced athlete, we've got you covered.
+          At Topwo, we believe that every athlete deserves access to the best pre-workout supplements on the market. That's why we work hard to provide you with the most comprehensive and up-to-date information available. Whether you're a beginner or an experienced athlete, we've got you covered.
           </Text>
           <Text color={'gray.500'}>
-          So why wait? Visit Pre-Workout Finder today and start creating your own personalized pre-workout blend or compare popular pre-workouts to find the best option for you!
+          So why wait? Start today and create your own personalized pre-workout blend or compare popular pre-workouts to find the best option for you!
           </Text>
-          <Stack
-            direction={'column'}
-            spacing={3}
-            align={'center'}
-            alignSelf={'center'}
-            position={'relative'}>
-              <Link href='https://github.com/LaihOsc/PwoCalc' isExternal>
-            
-            </Link>
-          </Stack>
+          
+          <Heading
+            fontWeight={600}
+            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+            lineHeight={'110%'}>
+            Contact <br />
+
+          </Heading>
+
+              <Box id='contact'><Contact /></Box>
+          
         </Stack>
       </Container>
       

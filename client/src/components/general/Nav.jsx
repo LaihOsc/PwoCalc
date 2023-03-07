@@ -1,9 +1,7 @@
 import {
   Box,
   Flex,
-  Link,
   Button,
-  useDisclosure,
   useColorModeValue,
   Stack,
   useColorMode,
@@ -12,50 +10,47 @@ import {
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
+import { NavHashLink } from 'react-router-hash-link';
+
 import {
   GiAcid
 } from 'react-icons/gi'
 
 
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
 
 
 
-
-export default function Nav({handleCurrencyChange, conversionRates, currency, tab, handleTabChange}) {
+export default function Nav({handleCurrencyChange, conversionRates, currency, handleTabChange}) {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} h={'fit-content'}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Stack direction={'column'} align={'center'}>
-          <GiAcid />
-          <Text fontWeight={'bold'}>TOPWO</Text>
-         
-          </Stack>
+        <Flex flexDir={'row'}>
+              <GiAcid size={50} />
+                <Text fontSize={'3xl'} fontWeight={'extrabold'}>TOPWO</Text>
+                <GiAcid size={50} />
+              </Flex>
           
           
 
 
           <Flex w={500} flexDir={'row'} justifyContent={'space-between'}>
-            <Button value={'landingPage'} onClick={handleTabChange} colorScheme={tab == 'landingPage' ? 'green' : null}>Home</Button>
-            <Button value={'leaderboards'} onClick={handleTabChange} colorScheme={tab == 'leaderboards' ? 'green' : null}>Leaderboards</Button>
-            <Button value={'duel'} onClick={handleTabChange} colorScheme={tab == 'duel' ? 'green' : null}>Duel</Button>
-            <Button value={'calculator'} onClick={handleTabChange} colorScheme={tab == 'calculator' ? 'green' : null}>Calculator</Button>
-            
+            <NavHashLink to='/'>
+            <Button value={'landingPage'} onClick={handleTabChange}>Home</Button>
+            </NavHashLink>
+
+            <NavHashLink to='ranking'>
+            <Button value={'leaderboards'} onClick={handleTabChange}>Leaderboards</Button>
+            </NavHashLink>
+
+            <NavHashLink to='duel'>
+            <Button value={'duel'} onClick={handleTabChange}>Duel</Button>
+            </NavHashLink>
+
+            <NavHashLink to='calculator'>
+            <Button value={'calculator'} onClick={handleTabChange}>Calculator</Button>
+            </NavHashLink>
             </Flex>
 
           <Flex alignItems={'center'}>

@@ -7,7 +7,8 @@ import {
   Avatar,
   useColorModeValue,
   Image,
-  Button
+  Button,
+  Link
 } from '@chakra-ui/react';
 
 import 
@@ -22,6 +23,10 @@ import {
 import{
     TbMathSymbols
 } from 'react-icons/tb'
+
+import {
+  AiOutlineArrowRight
+} from 'react-icons/ai'
 
 const choose = (prop) => {
     if (prop === 'leaderboards') {
@@ -47,7 +52,7 @@ const choose = (prop) => {
 
 
 
-export default function LandingPageCard({prop, handleTabChange}) {
+export default function LandingPageCard({prop, href, handleTabChange}) {
 
     const data = choose(prop)
   return (
@@ -59,7 +64,9 @@ export default function LandingPageCard({prop, handleTabChange}) {
         boxShadow={'2xl'}
         rounded={'md'}
         p={6}
-        overflow={'hidden'}>
+        overflow={'hidden'}
+        textAlign={'center'}>
+        
         <Box
           h={'210px'}
           bg={'gray.100'}
@@ -81,6 +88,7 @@ export default function LandingPageCard({prop, handleTabChange}) {
             {data.description}
           </Text>
 
+          <Link href={href}>
           <Button onClick={handleTabChange}
               colorScheme={'green'}
               bg={'green.400'}
@@ -92,9 +100,9 @@ export default function LandingPageCard({prop, handleTabChange}) {
 
               }}
               value={prop}>
-              <Text>yee</Text>
+              <Text><AiOutlineArrowRight /></Text>
             </Button>
-
+            </Link>
         
         </Stack>
       </Box>
