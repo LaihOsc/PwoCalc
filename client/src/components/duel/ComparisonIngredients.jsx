@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 
 import IngredientModal from '../general/IngredientModal'
-import ingredientData from '../../data/ingredientData'
+import ingredientData from '../../data/ingredientData2'
 
 
 export default function ComparisonIngredients({ingredients, currency, conversionRate, approximate}) {

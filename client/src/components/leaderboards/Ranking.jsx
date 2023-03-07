@@ -1,6 +1,6 @@
 import { Box, Center, Tooltip } from '@chakra-ui/react'
 import React from 'react'
-import ingredientData from '../../data/ingredientData'
+import ingredientData from '../../data/ingredientData2'
 
 import {
     Table,

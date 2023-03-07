@@ -1,4 +1,4 @@
-import { Center } from "@chakra-ui/react"
+import { Box, Center, Flex } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import Nav from "./components/general/Nav"
 import Preworkout from "./components/calculator/Preworkout"
@@ -7,6 +7,7 @@ import Ranking from "./components/leaderboards/Ranking"
 import productData from "./data/productData"
 import Comparison from "./components/duel/Comparison"
 import LandingPage from "./components/home/LandingPage"
+import Footer from "./components/general/Footer"
 
 
 function App() {
@@ -31,9 +32,10 @@ function App() {
 
   return (
 
-    <div>
+    <>
+      <Flex justifyItems={"center"} flexDir={'column'}>
       <Nav handleTabChange={handleTabChange} handleCurrencyChange={handleCurrencyChange} conversionRates={conversionRates} currency={currency} tab={tab}/>
-      <Center>
+      <Center pb={20}>
       {tab == 'leaderboards' 
       ? <Ranking products={productData} conversionRates={conversionRates} currency={currency}/>
       : tab == 'calculator' 
@@ -45,8 +47,9 @@ function App() {
     }
       
       </Center>
-      
-    </div>
+      <Footer />
+      </Flex>
+    </>
 
   )
 }

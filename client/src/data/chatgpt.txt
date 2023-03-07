@@ -1,0 +1,196 @@
+Creatine:
+Creatine is a naturally occurring compound that is found in meat and fish, and it's also produced by the body. It's often used as a supplement to improve athletic performance by increasing energy levels and promoting muscle growth. Benefits of creatine include increased strength, power, and endurance during high-intensity exercise. Some possible side effects include gastrointestinal discomfort and dehydration if not enough water is consumed. Recommended dosages range from 3 to 5 grams per day for most individuals.
+
+Citrulline:
+Citrulline is an amino acid that's naturally found in watermelon and is also produced by the body. It's often used as a supplement to improve athletic performance and reduce fatigue. Benefits of citrulline include increased blood flow and nutrient delivery to the muscles, which can enhance endurance and performance. There are generally no significant side effects associated with citrulline supplementation. Recommended dosages range from 6 to 8 grams per day.
+
+Citrulline Malate:
+Citrulline malate is a combination of citrulline and malic acid that's often used as a supplement to improve athletic performance. Benefits of citrulline malate include increased energy production and reduced fatigue during exercise, as well as improved recovery. There are generally no significant side effects associated with citrulline malate supplementation. Recommended dosages range from 6 to 8 grams per day.
+
+Caffeine:
+Caffeine is a natural stimulant that's commonly found in coffee, tea, and many energy drinks. It's often used as a supplement to improve alertness, focus, and athletic performance. Benefits of caffeine include increased energy, focus, and endurance during exercise. However, some possible side effects include increased heart rate, jitteriness, and anxiety. Recommended dosages range from 100 to 400 milligrams per day, depending on individual tolerance.
+
+Beta-Alanine:
+Beta-alanine is an amino acid that's naturally found in meat and fish, and it's also produced by the body. It's often used as a supplement to improve athletic performance by buffering the pH of muscle tissue, which can delay fatigue during high-intensity exercise. Benefits of beta-alanine include increased endurance, strength, and power during exercise. Some possible side effects include tingling and flushing sensations in the skin. Recommended dosages range from 2 to 5 grams per day.
+
+Trimethylglycine (Betaine):
+Trimethylglycine, also known as betaine, is a compound that's naturally found in beets and spinach. It's often used as a supplement to improve athletic performance by increasing power and strength. Benefits of betaine include improved endurance and strength during exercise. Some possible side effects include gastrointestinal discomfort and an increased risk of kidney stones in individuals with a history of kidney problems. Recommended dosages range from 2.5 to 6 grams per day.
+
+Arginine:
+Arginine is an amino acid that's naturally found in protein-rich foods such as meat, fish, and dairy. It's often used as a supplement to improve athletic performance by increasing blood flow to the muscles. Benefits of arginine include increased endurance, strength, and power during exercise. Some possible side effects include gastrointestinal discomfort and low blood pressure. Recommended dosages range from 3 to 6 grams per day.
+
+Tyrosine:
+Tyrosine is an amino acid that's naturally found in protein-rich foods such as meat, fish, and dairy. It's often used as a supplement to improve cognitive function and reduce stress. Benefits of tyrosine include increased focus, alertness, and cognitive function under stressful conditions. There are generally no significant side effects associated with tyrosine supplementation. Recommended dosages range from 500 to 2,000 milligrams per day.
+
+
+
+
+
+Creatine:
+{
+"description": "A naturally occurring compound that is stored in the muscles and used as a source of energy during high-intensity exercise.",
+"benefits": "Improves strength and power output, increases muscle mass and size, improves athletic performance, enhances recovery, and may have cognitive benefits.",
+"side effects": "May cause water retention, gastrointestinal distress, and muscle cramps in some individuals.",
+"dosage": "5g per day for maintenance, up to 20g per day for loading phase.",
+"price per kg": "$10-$20"
+}
+
+Citrulline:
+{
+"description": "An amino acid that is converted to arginine in the body and plays a role in the production of nitric oxide.",
+"benefits": "Improves blood flow, increases muscle pumps, enhances endurance, and may improve recovery.",
+"side effects": "May cause gastrointestinal distress in some individuals.",
+"dosage": "6-8g per day.",
+"price per kg": "$30-$50"
+}
+
+Citrulline malate:
+{
+"description": "A combination of citrulline and malic acid that is commonly used as a pre-workout supplement.",
+"benefits": "Improves blood flow, increases muscle pumps, enhances endurance, and may improve recovery.",
+"side effects": "May cause gastrointestinal distress in some individuals.",
+"dosage": "6-8g per day.",
+"price per kg": "$30-$50"
+}
+
+Caffeine:
+{
+"description": "A stimulant that acts on the central nervous system to increase alertness and reduce fatigue.",
+"benefits": "Improves focus and concentration, enhances endurance and performance, and may have fat-burning properties.",
+"side effects": "May cause jitteriness, insomnia, and gastrointestinal distress in some individuals.",
+"dosage": "3-6mg per kg of bodyweight.",
+"price per kg": "$30-$50"
+}
+
+Beta-Alanine:
+{
+"description": "An amino acid that is used by the body to produce carnosine, which helps to buffer acid in the muscles during exercise.",
+"benefits": "Improves endurance, delays fatigue, and may increase muscle mass.",
+"side effects": "May cause a tingling sensation on the skin (paresthesia).",
+"dosage": "3-6g per day.",
+"price per kg": "$50-$80"
+}
+
+Trimethylglycine (Betaine):
+{
+"description": "A compound that is naturally found in beets and spinach and is involved in the production of creatine.",
+"benefits": "Improves power output, increases muscle mass and strength, and may have cardiovascular benefits.",
+"side effects": "May cause gastrointestinal distress in some individuals.",
+"dosage": "2.5-6g per day.",
+"price per kg": "$50-$80"
+}
+
+Arginine:
+{
+"description": "An amino acid that is involved in the production of nitric oxide.",
+"benefits": "Improves blood flow, increases muscle pumps, and may enhance endurance.",
+"side effects": "May cause gastrointestinal distress in some individuals.",
+"dosage": "3-6g per day.",
+"price per kg": "$30-$50"
+}
+
+
+Tyrosine:
+{
+"description": "A non-essential amino acid that is involved in the production of neurotransmitters, such as dopamine and norepinephrine.",
+"benefits": "May improve cognitive function, reduce stress and fatigue, and enhance athletic performance.",
+"side effects": "May cause nausea, headache, or digestive issues at high doses.",
+"dosage": "500-2000 mg per day.",
+"price per kg": "$50-100."
+}
+
+Taurine:
+{
+"description": "An amino acid-like compound that is found in high concentrations in the brain, heart, and muscles.",
+"benefits": "May improve exercise performance, reduce oxidative stress, and support cardiovascular health.",
+"side effects": "Generally safe when taken in recommended doses, but may cause digestive issues at high doses.",
+"dosage": "500-2000 mg per day.",
+"price per kg": "$10-20."
+}
+
+Malic Acid:
+{
+"description": "A naturally occurring organic acid that is involved in energy production in the body.",
+"benefits": "May improve exercise performance, reduce muscle fatigue, and enhance recovery.",
+"side effects": "Generally safe when taken in recommended doses, but may cause digestive issues at high doses.",
+"dosage": "1-2 grams per day.",
+"price per kg": "$10-20."
+}
+
+Glycerol:
+{
+"description": "A sugar alcohol that is commonly used as a sweetener and humectant.",
+"benefits": "May improve exercise performance and hydration, and enhance muscular pumps.",
+"side effects": "May cause digestive issues and dehydration at high doses.",
+"dosage": "1-2 grams per kilogram of body weight, taken before exercise.",
+"price per kg": "$20-40."
+}
+
+Alpha GPC:
+{
+"description": "A naturally occurring compound that is involved in the production of acetylcholine, a neurotransmitter that is important for cognitive function.",
+"benefits": "May improve cognitive function, memory, and focus.",
+"side effects": "May cause headache, nausea, or digestive issues at high doses.",
+"dosage": "300-600 mg per day.",
+"price per kg": "$200-300."
+}
+
+Agmatine:
+{
+"description": "A naturally occurring compound that is involved in the regulation of nitric oxide production in the body.",
+"benefits": "May improve exercise performance, reduce pain and inflammation, and support cardiovascular health.",
+"side effects": "May cause digestive issues or hypotension at high doses.",
+"dosage": "500-1000 mg per day.",
+"price per kg": "$100-150."
+}
+
+Theanine:
+{
+"description": "An amino acid that is found in green tea leaves.",
+"benefits": "May improve cognitive function, reduce stress and anxiety, and enhance relaxation.",
+"side effects": "Generally safe when taken in recommended doses, but may cause dizziness or digestive issues at high doses.",
+"dosage": "100-200 mg per day.",
+"price per kg": "$500-700."
+}
+
+Theacrine:
+{
+"description": "A naturally occurring compound that is structurally similar to caffeine.",
+"benefits": "May improve cognitive function, reduce fatigue, and enhance exercise performance.",
+"side effects": "May cause nausea, headache, or jitteriness at high doses.",
+"dosage": "100-300 mg per day.",
+"price per kg": "$500-700."
+}
+
+
+Sure, as a professional front-end software developer, I can give you some ideas on what you could implement on your website for comparing and creating pre-workout supplements using ReactJS:
+
+Interactive product comparison chart: You could implement an interactive chart that allows users to compare the different pre-workout supplements side by side. This chart could include key features such as the amount of caffeine, type of creatine, and other important ingredients that are commonly found in pre-workout supplements.
+
+User reviews and ratings: Implementing a user review and rating system can provide valuable feedback to users, and allow them to compare products based on other users' experiences.
+
+Supplement quiz: You could create a quiz that asks users questions about their fitness goals, dietary restrictions, and workout routines. The quiz could then recommend a pre-workout supplement that best suits their needs.
+
+Supplement creator tool: You could create a tool that allows users to customize their own pre-workout supplement by selecting the ingredients they want and adjusting the dosage. This could also include a feature that calculates the price based on the user's selections.
+
+Comparison slider: Implementing a comparison slider that shows the before and after effects of taking a particular pre-workout supplement could be a great way to show the benefits of using the product.
+
+Interactive dosage calculator: You could create an interactive dosage calculator that allows users to input their weight and the desired effect they want from the pre-workout supplement, and then calculates the appropriate dosage.
+
+Ingredient glossary: Including an ingredient glossary can be helpful for users who are not familiar with the various ingredients commonly found in pre-workout supplements. This could provide a brief explanation of each ingredient and its potential benefits.
+
+These are just a few ideas to get you started. Ultimately, the features you choose to implement will depend on the specific goals of your website and the needs of your target audience.
+
+Sure, I can help you with that! Here's an outline of how I would approach implementing a weighted measuring system for pre-workout products based on recommended dosages for ingredients:
+
+Identify the key ingredients in the pre-workout products that you want to measure. Common ingredients might include caffeine, beta-alanine, creatine, citrulline malate, and others.
+
+Research recommended dosages for each ingredient. You'll want to consult scientific literature and trusted sources to determine safe and effective dosages for each ingredient. Keep in mind that recommended dosages may vary depending on factors such as body weight, gender, and other individual factors.
+
+Determine the weighting system you want to use. One approach could be to assign a weight to each ingredient based on its importance or potency, and then multiply the weight by the dosage to calculate a final score. For example, you might assign a weight of 2 to caffeine because it is a powerful stimulant, but only a weight of 1 to citrulline malate because it has a milder effect.
+
+Create a user interface for inputting dosages and calculating the weighted score. This could take the form of a web or mobile app, or a spreadsheet that users can download and use offline. The interface should allow users to input the dosage of each ingredient, and then calculate the final weighted score based on the weights you've assigned.
+
+Test the system to ensure accuracy and safety. Make sure that the recommended dosages and weighting system you've chosen are safe and effective for users, and that the user interface is user-friendly and accurate. You may want to consult with a nutritionist or other health expert to ensure that your system is based on sound principles.
+
+Overall, a weighted measuring system can be a useful tool for pre-workout supplement users who want to ensure that they are taking safe and effective dosages of key ingredients. By carefully researching dosages and weighting each ingredient based on its importance, you can create a system that helps users make informed decisions about their pre-workout supplements.

@@ -21,6 +21,7 @@ export default function IngredientModal({data}) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   if (data.description) {
 
+
   return (
 
       
@@ -37,23 +38,15 @@ export default function IngredientModal({data}) {
         <Text>{data.description}</Text>
 
 
-        {data.benefits.length > 0 ?
-        <>
+
         <Text fontWeight={'bold'}>Benefits:</Text>
-        <UnorderedList>
-        {data.benefits.map((benefit) => {return(<ListItem>{benefit}</ListItem>)})}
-        </UnorderedList>
-        </>
-        : null}
+        {data.benefits}
+
         
-        {data.sideEffects.length > 0 ?
-        <>
-        <Text fontWeight={'bold'}>Possible side effects:</Text>
-        <UnorderedList>
-        {data.sideEffects.map((sideEffect) => {return(<ListItem>{sideEffect}</ListItem>)})}
-        </UnorderedList>
-        </>
-        : null}
+
+        <Text fontWeight={'bold'}>Side effects:</Text>
+        {data.sideEffects}
+
         
         
         

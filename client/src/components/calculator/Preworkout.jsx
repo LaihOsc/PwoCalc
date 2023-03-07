@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Box, Button, Flex, Input, Select, Stat, StatLabel, StatNumber, StatGroup, Text, Heading } from '@chakra-ui/react'
-import ingredientData from '../../data/ingredientData'
+import ingredientData from '../../data/ingredientData2'
 import Ingredients from '../general/Ingredients'
 import ServingSlider from '../general/ServingSlider'
 
