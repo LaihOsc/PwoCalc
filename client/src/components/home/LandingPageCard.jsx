@@ -28,6 +28,8 @@ import {
   AiOutlineArrowRight
 } from 'react-icons/ai'
 
+import { NavHashLink } from 'react-router-hash-link';
+
 const choose = (prop) => {
     if (prop === 'leaderboards') {
     return({
@@ -58,8 +60,8 @@ export default function LandingPageCard({prop, href, handleTabChange}) {
   return (
     <Center id={prop} px={4} py={6}>
       <Box
-        maxW={'445px'}
-        w={'full'}
+        maxW={{base:'80%', sm: '445px'}}
+        w={'100%'}
         bg={useColorModeValue('white', 'gray.900')}
         boxShadow={'2xl'}
         rounded={'md'}
@@ -88,7 +90,7 @@ export default function LandingPageCard({prop, href, handleTabChange}) {
             {data.description}
           </Text>
 
-          <Link href={href}>
+          <NavHashLink to={href}>
           <Button onClick={handleTabChange}
               colorScheme={'green'}
               bg={'green.400'}
@@ -102,7 +104,7 @@ export default function LandingPageCard({prop, href, handleTabChange}) {
               value={prop}>
               <Text><AiOutlineArrowRight /></Text>
             </Button>
-            </Link>
+            </NavHashLink>
         
         </Stack>
       </Box>

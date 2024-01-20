@@ -8,7 +8,6 @@ import {
   Stack,
   Flex,
   createIcon,
-  Link,
 } from '@chakra-ui/react';
 import LandingPageCard from './LandingPageCard';
 
@@ -16,6 +15,10 @@ import {
   AiOutlineGithub
 } from 'react-icons/ai'
 import Contact from '../general/Contact';
+
+import { Link } from 'react-router-dom';
+
+import { NavHashLink } from 'react-router-hash-link'
 
 export default function LandingPage({handleTabChange}) {
   return (
@@ -27,7 +30,7 @@ export default function LandingPage({handleTabChange}) {
         />
       </Head>
 
-      <Container id='home' maxW={'4xl'}>
+      <Container id='home' w={1500}>
         <Stack
           as={Box}
           textAlign={'center'}
@@ -46,13 +49,15 @@ export default function LandingPage({handleTabChange}) {
           No longer do you need to waste your time finding the contents of pre-workouts.
             Browse prices and ingredients of the endless pre-workout products on the market, all conveniently in one place.
           </Text>
+          
+           
           <Stack
             direction={'column'}
             spacing={3}
             align={'center'}
             alignSelf={'center'}
             position={'relative'}>
-              <Link href='https://github.com/LaihOsc/PwoCalc' isExternal>
+              <NavHashLink to='submit'>
             <Button
               colorScheme={'green'}
               bg={'green.400'}
@@ -63,16 +68,17 @@ export default function LandingPage({handleTabChange}) {
                 bg: 'green.500',
 
               }}>
-              <AiOutlineGithub /> Github
+              Submit a pre-workout
             </Button>
-            </Link>
+            </NavHashLink>
           </Stack>
+
         </Stack>
-        <Flex direction={'row'} justifyContent={'flex-start'}>
+        <Box display={{base: 'block', sm: 'flex'}} justifyContent={'center'}>
           <LandingPageCard href={'ranking'} prop={'leaderboards'} handleTabChange={handleTabChange} />
           <LandingPageCard href={'duel'} prop={'duel'} handleTabChange={handleTabChange} />
           <LandingPageCard href={'calculator'} prop={'calculator'} handleTabChange={handleTabChange} />
-        </Flex>
+        </Box>
         <Stack
           as={Box}
           textAlign={'center'}

@@ -9,6 +9,8 @@ import Comparison from "./components/duel/Comparison"
 import LandingPage from "./components/home/LandingPage"
 import Footer from "./components/general/Footer"
 import { Route, Routes } from "react-router-dom"
+import Form from "./components/form/Form"
+import FormPage from "./components/form/FormPage"
 
 
 function App() {
@@ -34,15 +36,17 @@ function App() {
   return (
 
     <>
-      <Flex justifyItems={"center"} flexDir={'column'}>
+      <Flex justifyItems={"center"} flexDir={'column'} minH={'100vh'} minW={'100vh'}>
       <Nav handleTabChange={handleTabChange} handleCurrencyChange={handleCurrencyChange} conversionRates={conversionRates} currency={currency} tab={tab}/>
-      <Center pb={20}>
+      <Center alignSelf={'center'} pb={20} w={[1, 1/2, 1/4]}>
       
       <Routes>
         <Route path="/" element={<LandingPage handleTabChange={handleTabChange} />}></Route>
         <Route path="/ranking" element={<Ranking products={productData} conversionRates={conversionRates} currency={currency} />}></Route>
         <Route path="/duel" element={<Comparison conversionRates={conversionRates} currency={currency} />}></Route>
         <Route path="/calculator" element={<Preworkout conversionRates={conversionRates} currency={currency} />}></Route>
+        <Route path="/submit" element={<FormPage conversionRates={conversionRates} handleTabChange={handleTabChange} />}></Route>
+        {/* <Route path="/calculator" element={<Preworkout conversionRates={conversionRates} currency={currency} />}></Route> */}
       </Routes>
       
       </Center>
